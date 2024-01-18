@@ -33,4 +33,4 @@ jobs:
           AIRTABLE_API_KEY: ${{ patIqzBAoDQ4bb39N.528fc2b11ece2f6feee104a5a422ba08406b0a6b8e4880365308c80bdc6de40e }}
           AIRTABLE_BASE_ID: ${{ appUl6O6X3FT8SwnE }}
           AIRTABLE_TABLE_NAME: '👥 고객관리 DB'
-          BITLY_ACCESS_TOKEN: ${{ secrets.BITLY_ACCESS_TOKEN }}
+          BITLY_ACCESS_TOKEN: ${{ 0fdf026e6dd1ea6a972d9bf57c0666b35d01ac46 }}
