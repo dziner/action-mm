@@ -6,7 +6,7 @@ AIRTABLE_BASE_ID = os.getenv('appUl6O6X3FT8SwnE')
 AIRTABLE_TABLE_NAME = os.getenv('tblRMCLbbMmBOxVr8')
 
 # Bitly API settings
-BITLY_ACCESS_TOKEN = os.getenv('BITLY_ACCESS_TOKEN')
+BITLY_ACCESS_TOKEN = os.getenv('0fdf026e6dd1ea6a972d9bf57c0666b35d01ac46')
 
 def shorten_url(original_url):
     # Implement the logic to interact with Airtable and Bitly
