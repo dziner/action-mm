@@ -1,0 +1,36 @@
+name: Shorten URL
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+  # Add more events as needed, e.g., schedule, or repository_dispatch
+
+jobs:
+  shorten_url:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Python script
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        # You may need to add this step based on your dependencies
+
+      - name: Execute Python script
+        run: python scripts/shorten_url_script.py
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+          AIRTABLE_TABLE_NAME: 'your_table_name'
+          BITLY_ACCESS_TOKEN: ${{ secrets.BITLY_ACCESS_TOKEN }}
